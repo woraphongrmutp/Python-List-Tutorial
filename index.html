@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Lists Tutorial</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta name="Python List Tutorial" content="Python List ,การใช้งาน Python List,How to Pyton List">
+</head>
+<body>
+    <header>
+        <h1>Python List</h1>
+    </header>
+
+    <div class="container">
+        <!-- Side Menu -->
+        <nav class="side-menu">
+            <ul>
+                <li><a href="#topic-0">List</a></li>
+                <li><a href="#topic-1">append</a></li>
+                <li><a href="#topic-2">extend</a></li>
+                <li><a href="#topic-3">insert</a></li>
+                <li><a href="#topic-4">remove</a></li>
+                <li><a href="#topic-5">pop</a></li>
+                <li><a href="#topic-6">slice</a></li>
+                <li><a href="#topic-7">reverse</a></li>
+                <li><a href="#topic-8">len</a></li>
+                <li><a href="#topic-9">min & max</a></li>
+                <li><a href="#topic-10">count</a></li>
+                <li><a href="#topic-11">concatenate</a></li>
+                <li><a href="#topic-12">sort</a></li>
+                <li><a href="#topic-13">loop</a></li>
+                
+            </ul>
+        </nav>
+        
+        <!-- Main Content -->
+        <main>
+            
+            <section class="content">
+                <div id="topic-0" class="item">
+                    <h2>List</h2>
+                    <p>list คือลักษณะข้อมูลลิสต์หรือรายการข้อมูล</p>
+                    <p>เป็นข้อมูลที่มีลักษณะเป็นรายการข้อมูลหลายๆตัว วางเรียงต่อกันโคยแต่ละตัวจะแยกกันด้วยเครื่องหมาย (,)</p>
+                    <p>และเรียกข้อมูลแต่ละตัวว่าสมาชิก(element)ของลิสต์ โดยใช้เครื่องหมายวงเล็บก้ามปู [ ] แสดงขอบเขตข้อมูล</p>
+                    <p>และข้อมูลในวงเล็บก้ามปูเป็นชนิดใดก็ได้ (ตัวเลข ข้อความ หรือรายการข้อมูล) กรณีที่ไม่มีข้อมูลในวงเล็บก้ามปู [ ]</p>
+                    <p>จะถือว่าเป็นลิสต์ว่าง</p>
+                    <br>รูปแบบ</br>
+                    <p>numbers = [-1, 2, 5, 8, 10, 13]
+                    <p>names = ['Mateo', 'Danny', 'James', 'Thomas', 'Luke']</p>
+                    <p>mixed_type = [-2, 5, 84.2, "Mountain", "Python"]</p>
+                    <br>การเข้าถึงข้อมูลในลิสต์<br>
+                    <p>List นั้นใช้ Index สำหรับการเข้าถึงข้อมูล โดย Index ของ List จะเป็นจำนวนเต็มที่เริ่มจาก 0 และเพิ่มขึ้นทีละ 1 ไปเรื่อยๆ 
+                    <p>ดังนั้น เราจึงสามารถเข้าถึงข้อมูลภายใน List เพื่ออ่านหรืออัพเดทค่าได้โดยตรงผ่าน Index ของมัน นี่เป็นโค้ดการเข้าถึงข้อมูลภายใน List ในภาษา Python<p>
+                    <p>names = ['Mateo', 'Danny', 'James', 'Thomas', 'Luke']<p>
+                        <p>print('names[0] = ', names[0])<p>
+                        <p>print('names[3] = ', names[3])<p>
+                        <p>print('names[-1] = ', names[-1])</p>
+                        <br>
+                        <p> update value </p>
+                        <p>names[0] = 'Bob'</p>
+                        <p>print('names[0] = ', names[0])</p>
+                        <p>ในตัวอย่าง เรามีตัวแปร List ที่ชื่อว่า names ดังนั้น เพื่อเข้าถึงสมาชิกตัวแรกภายใน List ซึ่งก็คือ "Mateo" นั้นจะใช้คำสั่ง names[0]</p>
+                        <p>และสมาชิกที่มีค่าเป็น "Thomas" ซึ่งอยู่ตำแหน่งที่ 4 จะใช้คำสั่ง names[3] สังเกตว่า Index จะลดลงหนึ่งเพราะ Index ของ List นั้นเริ่มต้นจาก 0</p>
+                </p>
+                <div>
+                 <br>
+                <h2>เมธอด หรือ Function พื้นฐาน</h2>   
+                </div>
+                <div id="topic-1" class="item">
+                    <h2>1. append()</h2>
+                    <p>เมธอด append() ใช้สำหรับเพิ่มสมาชิกเข้าไปในลิสต์ โดยสมาชิกที่เพิ่มเข้าไปเข้าไปจะ อยู่ต่อกับสมาชิกตัวสุดท้าย 
+                       <br>รูปแบบ</br> 
+                           <br>x.append(c)<br>
+                           <br>x หมายถึงตัวแปรลิสต์<br>
+                           <br>c หมายถึงสมาชิกที่ต้องการเพิ่ม<br>
+                    </p>
+                    <h3>ตัวอย่างที่ 1</h3>
+                    <img src="images/append/append1.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/append/append1.1.png" alt="Example Image 2">
+                    <h3>ตัวอย่างที่ 2</h3>
+                    <img src="images/append/append2.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/append/append2.1.png" alt="Example Image 2">
+                </div>
+
+                <div id="topic-2" class="item">
+                    <h2>2. extend()</h2>
+                    <p>
+                        เมธอด extend() ใช้สำหรับนำเอาข้อมูลสมาชิกในลิสต์หนึ่งไปต่อท้ายข้อมูลของอีกลิสต์หนึ่ง หรือนำเอาสมาชิกของข้อมูลประเภท iterable อื่น ๆ 
+                        ไปต่อท้ายข้อมูลในลิสต์ปลายทาง มีรูปแบบการใช้งานดังนี้
+                        <br><br>
+                        <br>list.extend(iterable)</br>
+                        <br>iterable คือข้อมูลประเภทคอลเล็กชันใด ๆ ก็ได้ เช่น list, set, tuple หรืออื่น ๆ<br>
+                    </p><br />
+                    <h3>ตัวอย่างที่ 1</h3>
+                    <img src="images/extend/extend1.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/extend/extend1.1.png" alt="Example Image 2">
+                    <h3>ตัวอย่างที่ 2</h3>
+                    <img src="images/extend/exten2.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/extend/exten2.1.png" alt="Example Image 2">
+                </div>
+
+                <div id="topic-3" class="item">
+                    <h2>3. insert()</h2>
+                    <p>
+                        เมธอด insert() ใช้สำหรับแทรกสมาชิกลงในลิสต์ ตามตำแหน่งที่ต้องการ
+                        จะทำให้สมาชิกในตำแหน่งเดิมถอยหลังไป
+                    </p><br />
+                        <p>รูปแบบ</p>
+                        <br> x.insert(p,e)<br>
+                        <br> x หมายถึงตัวแปร ลิสต์ ที่ต้องการแทรกข้อมูล<br>
+                        <br> p หมายถึงตำแหน่งที่ต้องการแทรก<br>
+                        <br> c หมายถึงจ้อมูลที่ต้องการแทรก<br>
+                    <h3>ตัวอย่างที่ 1</h3>
+                    <img src="images/insert/insert1.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/insert/insert1.1.png" alt="Example Image 2">
+                    <h3>ตัวอย่างที่ 2</h3>
+                    <img src="images/insert/insert2.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/insert/insert2.1.png" alt="Example Image 2">
+                </div>
+
+                <div id="topic-4" class="item">
+                    <h2>4. remove()</h2>
+                    <p>
+                        เมธอด remove() ใช้สำหรับลบสมาชิกในลิสต์ที่ต้องการ ออกไปครั้งละ 1 ตัว 
+                    </p><br />
+                    <p>รูปแบบ</p>
+                    <br> x.remove(e)<br>
+                    <br> x หมายถึงตัวแปร ลิสต์ ที่ต้องการลบ<br>
+                    <br> e หมายถึงข้อมูลที่ต้องการลบ<br>
+                    <h3>ตัวอย่างที่ 1</h3>
+                    <img src="images/remove/remove1.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/remove/remove1.1.png" alt="Example Image 2">
+                    <h3>ตัวอย่างที่ 2</h3>
+                    <img src="images/remove/remove2.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/remove/remove2.1.png" alt="Example Image 2">
+                </div>
+
+                <div id="topic-5" class="item">
+                    <h2>5. pop()</h2>
+                    <p>
+                        เมธอด pop() ใช้ลบสมาชิกในลิสต์ในตำแหน่งที่ต้องการ
+                    </p><br />
+                    <p>รูปแบบ</p>
+                    <br> x.pop(p)<br>
+                    <br> x หมายถึงตัวแปร ลิสต์ ที่ต้องการลบ<br>
+                    <br> e หมายถึงตำแหน่งที่ต้องการลบ<br>
+                    <h3>ตัวอย่างที่ 1</h3>
+                    <img src="images/pop/pop1.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/pop/pop1.1.png" alt="Example Image 2">
+                    <h3>ตัวอย่างที่ 2</h3>
+                    <img src="images/pop/pop2.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/pop/pop2.1.png" alt="Example Image 2">
+                </div>
+
+                <div id="topic-6" class="item">
+                    <h2>6. slice</h2>
+                    <p>
+                        เมธอด slice เลือกสมาชิกบางส่วนของ list ออกมาได้ด้วยการกำหนดค่าของตำแหน่งเริ่มต้นและสิ้นสุด
+                        <p>รูปแบบ</p>
+                        <br> python_list[start:stop:]<br>
+                        <br> start ตำแหน่งของ สามาชิกที่ต้องการดึงออกมาเป็นตัวแรก(start)<br>
+                        <br> stop ตำแหน่งสุดท้าย ซึ่งผลลัพธืจะไม่รวมสมาชิกในตำแหน่งนี้(exclude)<br>
+                        stride เราสามารถกำหนด stride เป็น 2 เพื่อนำสมาชิกออกมา ตัว เว้น ตัว หรือจะใส่เป็น -1 เพื่ิอ reverse ผลลัพธ์(กลับจากหลังมาหน้า)ได้ 
+                    </p><br />
+                    <h3>ตัวอย่างที่ 1</h3>
+                    <img src="images/slice/slice1.png" alt="Example Image 1">
+                    <p>Output<p>
+                    <img src="images/slice/slice1.1.png" alt="Example Image 2">
+                    <h3>ตัวอย่างที่ 2</h3>
+                    <img src="index.htmlmages/slice/slice2.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/slice/slice2.1.png" alt="Example Image 2">
+                </div>
+
+                <div id="topic-7" class="item">
+                    <h2>7. reverse()</h2>
+                    <p>
+                        เมธอด reverse() ใช้สลับตำแหน่งของสมาชิกในลิสต์ จากตัวหลังมาไว้เป็นตัวหน้าทีละตัวตามลำดับ
+                    </p><br />
+                    <p>รูปแบบ</p>
+                    <br> x.reverse()<br>
+                    <h3>ตัวอย่างที่ 1</h3>
+                    <img src="images/reverse/reverse1.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/reverse/reverse1.1.png" alt="Example Image 2">
+                    <h3>ตัวอย่างที่ 2</h3>
+                    <img src="images/reverse/reverse2.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/reverse/reverse2.1.png" alt="Example Image 2">
+                </div>
+
+                <div id="topic-8" class="item">
+                    <h2>8. len()</h2>
+                    <p>
+                        เมธอด len() ใช้หาความยาวของลิสต์ (จำนวนข้อมูลที่อยู่ในลิสต์)
+                    </p><br />
+                    <p>รูปแบบ</p>
+                    <br> len(list)<br>
+                    <br> list หมายถึง ข้อมูลลิสต์หรือตัวแปรลิสต์<br>
+                    <h3>ตัวอย่างที่ 1</h3>
+                    <img src="images/len/len1.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/len/len1.1.png" alt="Example Image 2">
+                </div>
+
+                <div id="topic-9" class="item">
+                    <h2>9. min() & max()</h2>
+                    <p>
+                        เมธอด min() ใช้เพื่อคืนค่าค่าต่ำสุดในลิสต์ เมธอด max() ใช้เพื่อคืนค่าค่าสูงสุดในลิสต์ <br />
+                
+                    </p><br />
+                    <h3>ตัวอย่างที่ 1</h3>
+                    <img src="images/min-max/minmax1.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/min-max/minmax1.1.png" alt="Example Image 2">
+                </div>
+
+                <div id="topic-10" class="item">
+                    <h2>10. count()</h2>
+                    <p>
+                        ฟังก์ชัน count() ใช้สำหรับนับจำนวนข้อมูลที่พบใน List โดยฟังก์ชัน count จะคืนค่าเป็นชนิดตัวเลข ที่สามารถนับได้
+                    </p><br />
+                    <p>รูปแบบ</p>
+                    <br> count(list)<br>
+                    <br> list หมายถึง ข้อมูลลิสต์หรือตัวแปรลิสต์<br>
+                    <h3>ตัวอย่างที่ 1</h3>
+                    <img src="images/count/count1.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/count/count1.1.png" alt="Example Image 2">
+                </div>
+
+                <div id="topic-11" class="item">
+                    <h2>11. concatenate</h2>
+                    <p>
+                        การทำงานของ concatenate ใช้เพื่อรวมลิสต์สองอันเข้าด้วยกัน(นำลิสต์มาต่อกัน) <br /> 
+                        การรวมลิสต์จะทำโดยใช้เครื่องหมาย + โดยลิสต์แต่ละอันจะไม่ถูกแก้ไข และจะแสดงลิสต์ใหม่ที่รวมกันแล้ว
+                    </p><br />
+                    <h3>ตัวอย่างที่ 1</h3>
+                    <img src="images/concatenate/concat1.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/concatenate/concat1.1.png" alt="Example Image 2">
+                    <h3>ตัวอย่างที่ 2</h3>
+                    <img src="images/concatenate/concat2.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/concatenate/concat2.1.png" alt="Example Image 2">
+                </div>
+
+                <div id="topic-12" class="item">
+                    <h2>12. sort()</h2>
+                    <p>
+                        เมธอด sort() ใช้สำหรับจัดเรียงลำดับสมาชิกในลิสต์จากน้อยไปมาก
+                    </p><br />
+                    <p>รูปแบบ</p>
+                    <br> x.sort()<br>
+                    <br> x หมายถึง ตัวแปรลิสต์ที่ต้องการเรียงลำดับ<br>
+                    <h3>ตัวอย่างที่ 1</h3>
+                    <img src="images/sort/sort1.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/sort/sort1.1.png" alt="Example Image 2">
+                </div>
+
+                <div id="topic-13" class="item">
+                    <h2>13. loop()</h2>
+                    <p>
+                        ใช้ for item in myList: เพื่อวนลูปผ่านแต่ละสมาชิกในลิสต์ <br />
+                        เหมาะสำหรับกรณีที่ต้องการเข้าถึงค่าของแต่ละรายการในลิสต์
+                    </p><br />
+                    <h3>ตัวอย่างที่ 1</h3>
+                    <img src="images/loop/loop1.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="/images/loop/loop1.1.png" alt="Example Image 2">
+                    <h3>ตัวอย่างที่ 2</h3>
+                    <img src="images/loop/loop2.png" alt="Example Image 1">
+                    <p>Output</p>
+                    <img src="images/loop/loop2.1.png" alt="Example Image 2">
+                </div>
+            </section>
+        </main>
+    </div>
+                    
+    
+
+</body>
+</html>
+<footer>
+    <p><a href="#topic-0">Home</a></p>
+    <a href="https://www.naiin.com/product/detail/238388">ร้านหนังสือนายอินทร์ </a>
+</footer>
